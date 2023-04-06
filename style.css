@@ -1,0 +1,90 @@
+body{
+    background-color: brown;
+}
+
+
+#game-container{
+    margin: 3% auto;
+    position: relative;
+    border: 1px solid black;
+    height: 70vh;
+    width: 80vw;
+    background-image: url("img/art.gif");
+    overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/* score */
+#score{
+    position: absolute;
+    top: 0px;
+    color: white;
+    right: 10vw;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+/* character */
+#character{
+    position: absolute;
+    bottom: 0vh;
+    left: 20vw;
+}
+
+#character img{
+    height: 100px; 
+}
+
+
+/* obsticle */
+#obsticle{
+    height: 100px;
+    width: 100px;
+    background-image: url(img/bomb.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0vh;
+    left: 80vw;
+    animation: move_obsticle 3s infinite;
+}
+
+
+.jump-animation{
+    animation: jump 1s infinite;
+}
+
+
+@keyframes jump{
+    0% {
+        bottom: 0vh;
+    }
+    25% {
+        bottom: 15vh;
+        left: 22vw;
+    }
+    50% {
+        bottom: 20vh;
+        left: 26vw;
+    }
+    70% {
+        bottom: 15vh;
+        left: 22vw;
+    }
+    100%{
+       bottom: 0vh;
+       left: 20vw;
+    }
+}
+
+
+@keyframes move_obsticle{
+    0% {
+        left: 80vw;
+    }
+    100%{
+       left: -20vw;
+    }
+}
